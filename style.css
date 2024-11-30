@@ -246,6 +246,7 @@
     width: 50rem;
     margin-bottom: 5rem;
     filter: grayscale(100%);
+    border-radius:.5rem;
 }
 .cam img:hover{
     filter: grayscale(0);
@@ -293,7 +294,7 @@
 .audio{
     background-color: rgb(255, 255, 255);
     width: 60rem;
-    margin-left: 11rem;
+    margin-left: 17rem;
     border-radius: 1rem;
     box-shadow: 1rem;
 }
@@ -307,4 +308,89 @@
 }
 .audio-spec p{
     color: #7c7878
+}
+.audio-wrap {
+    position: relative;
+    height: 300px; /* Set a height for the container */
+    display: flex; /* Arrange the children in a row */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+}
+
+.audio-spec {
+    position: relative; /* Allow z-index to take effect */
+    width: 250px; /* Set a fixed width for the cards */
+    height: 250px; /* Set a fixed height for the cards */
+    text-align: center;
+    padding: 20px;
+    background-color: white; /* Add a background color */
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 -50px; /* Overlap the cards horizontally */
+    z-index: 1; /* Default stacking order */
+    transition: transform 0.3s, z-index 0.3s; /* Smooth hover effect */
+}
+
+/* Style for specific cards */
+.audio-spec:nth-child(1) {
+    background-color: #f8d7da; /* Light red */
+    z-index: 1; /* Lowest layer */
+}
+
+.audio-spec:nth-child(2) {
+    background-color: #d4edda; /* Light green */
+    z-index: 2; /* Middle layer */
+    transform: scale(1.1); /* Slightly enlarge the middle card */
+}
+
+.audio-spec:nth-child(3) {
+    background-color: #d1ecf1; /* Light blue */
+    z-index: 1; /* Lowest layer */
+}
+
+/* Hover effect to bring the card to the top */
+.audio-spec:hover {
+    z-index: 3; /* Bring the hovered card to the top */
+    transform: scale(1.2); /* Enlarge the hovered card */
+}
+#a18-main{
+    background-color: #000;
+}
+.chipset h1, h2, p{
+    color: #ffffff;
+  }
+.chipset p{
+    font-weight: 500 ;
+    font-size: 1.4rem;
+    color: #7c7878
+}
+.chipset span{
+    color: #ffffff;
+}
+.chipset h1, h2{
+    font-weight: 700;
+    margin-top: 6rem;
+}
+.chipset p{
+    margin-top: 6rem;
+}
+.chipset h1{
+    color: #3975d7;
+}
+.chipset h2{
+    font-weight: 700;
+}
+.chip h1{
+    font-size: 1.8rem;
+    color: #3975d7;
+    font-weight: 500;
+    margin: 0;
+}
+.chip h3{
+    color: #ffffff;
+}
+.chip-spec{
+    display: flex;
+    flex-direction: row;
 }
