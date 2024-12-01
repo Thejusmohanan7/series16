@@ -1,396 +1,710 @@
- /* CSS for Parallax and Panels */
- #pinContainer {
-     width: 100%;
-     height: 100vh;
-     /* Full viewport height */
-     overflow: hidden;
-     -webkit-perspective: 1000;
-     perspective: 1000;
- }
+body {
+    scroll-behavior: smooth;
+}
 
- #slideContainer {
-     width: 400%;
-     /* 4 panels, each 100% width */
-     height: 100%;
- }
+/* CSS for Parallax and Panels */
+#pinContainer {
+    width: 100%;
+    height: 100vh;
+    /* Full viewport height */
+    overflow: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+}
 
- .panel {
-     height: 100%;
-     width: 25%;
-     /* 25% of 400% width = 100% per panel */
-     float: left;
-     position: relative;
- }
+#slideContainer {
+    width: 400%;
+    /* 4 panels, each 100% width */
+    height: 100%;
+}
 
- .panel img {
-     width: 100%;
-     /* Image takes full width */
-     height: auto;
-     /* Maintain aspect ratio */
-     object-fit: cover;
-     /* Ensure image fills panel area */
- }
+.panel {
+    height: 100%;
+    width: 25%;
+    /* 25% of 400% width = 100% per panel */
+    float: left;
+    position: relative;
+}
 
- .series-16 {
-     display: flex;
-     justify-content: space-between;
- }
+.panel img {
+    width: 100%;
+    /* Image takes full width */
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+    /* Ensure image fills panel area */
+}
 
- .series-16 img {
-     width: 70rem;
- }
- .series-16 h3{
+.series-16 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.series-16 img {
+    width: 70rem;
+}
+
+.series-16 h3 {
     overflow: hidden;
     white-space: nowrap;
     font-weight: 600;
-    animation: typing 4s steps(40,end) infinite;
- }
- @keyframes typing{
+    animation: typing 4s steps(40, end) infinite;
+}
+
+@keyframes typing {
     from {
         width: 0;
     }
+
     to {
         width: 100%;
     }
- }
+}
 
- .series-16 h1 {
-     margin-left: 3rem;
-     margin-top: 16rem;
-     font-family: "Sora", sans-serif;
-     font-optical-sizing: auto;
-     font-weight: <weight>;
-     font-style: normal;
- }
+.series-16 h1 {
+    margin-left: 3rem;
+    margin-top: 16rem;
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
 
- .text-5xl h1 {
-     font-family: "Darker Grotesque", sans-serif;
-     font-optical-sizing: auto;
-     font-weight: 800;
-     font-style: normal;
-     color: #898585;
- }
+.text-5xl h1 {
+    font-family: "Darker Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    color: #898585;
+}
 
- .sec-2-head h1 {
-     font-family: "Darker Grotesque", sans-serif;
-     font-optical-sizing: auto;
-     font-weight: 600;
-     font-style: normal;
-     font-size: 5rem;
-     margin-top: 3rem;
-     margin-bottom: 3rem;
- }
+.sec-2-head h1 {
+    font-family: "Darker Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
 
- #reveal1 {
-     opacity: 0;
-     -webkit-transform: scale(0.9);
-     -moz-transform: scale(0.9);
-     -ms-transform: scale(0.9);
-     -o-transform: scale(0.9);
-     transform: scale(0.9);
-     -webkit-transition: all 1s ease-in-out;
-     -moz-transition: all 1s ease-in-out;
-     -ms-transition: all 1s ease-in-out;
-     -o-transition: all 1s ease-in-out;
-     transition: all 1s ease-in-out;
- }
+#reveal1 {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
 
- #reveal1.visible {
-     opacity: 1;
-     -webkit-transform: none;
-     -moz-transform: none;
-     -ms-transform: none;
-     -o-transform: none;
-     transform: none;
- }
+#reveal1.visible {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
 
- #reveal2 {
-     opacity: 0;
-     -webkit-transform: rotate(40deg) scale(0.5);
-     -moz-transform: rotate(40deg) scale(0.5);
-     -ms-transform: rotate(40deg) scale(0.5);
-     -o-transform: rotate(40deg) scale(0.5);
-     transform: rotate(40deg) scale(0.5);
-     -webkit-transition: all 0.8s ease-in-out;
-     -moz-transition: all 0.8s ease-in-out;
-     -ms-transition: all 0.8s ease-in-out;
-     -o-transition: all 0.8s ease-in-out;
-     transition: all 0.8s ease-in-out;
- }
+#reveal2 {
+    opacity: 0;
+    -webkit-transform: rotate(40deg) scale(0.5);
+    -moz-transform: rotate(40deg) scale(0.5);
+    -ms-transform: rotate(40deg) scale(0.5);
+    -o-transform: rotate(40deg) scale(0.5);
+    transform: rotate(40deg) scale(0.5);
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+}
 
- #reveal2.visible {
-     opacity: 1;
-     -webkit-transform: none;
-     -moz-transform: none;
-     -ms-transform: none;
-     -o-transform: none;
-     transform: none;
- }
- .privacy img{
+#reveal2.visible {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+}
+
+.privacy img {
     margin-left: 50%;
     margin-top: 3rem;
     margin-bottom: 3rem;
- }
- .privacy h1{
+}
+
+.privacy h1 {
     margin-left: 30%;
     margin-bottom: 2rem;
- }
- .privacy-p{
+}
+
+.privacy-p {
     display: flex;
     width: 100%;
     margin-bottom: 3rem;
     font-size: 1.4rem;
 
- }
-.privacy-p .p1{
+}
+
+.privacy-p .p1 {
     width: 20%;
     margin-left: 31%;
     color: #898585
 }
-.privacy-p .p2{
+
+.privacy-p .p2 {
     width: 20%;
     margin-right: 0px;
     margin-left: 2rem;
     color: #898585
-} 
-.camera{
+}
+
+.camera {
     margin-top: 7rem;
     margin-bottom: 3rem;
 }
-.camera span{
+
+.camera span {
     font-weight: 500;
     color: #000;
 }
-.camera p{
+
+.camera p {
     margin-bottom: 3rem;
     margin-top: 3rem;
     width: 55%;
     margin-left: 12%;
-    font-weight: 500 ;
+    font-weight: 500;
     font-size: 1.4rem;
 
     color: #898585
 }
-.camera h1{
+
+.camera h1 {
     margin-left: 12%;
-    color: #588ee6;
+    color:#3975d7;
 }
-.camera h2{
+
+.camera h2 {
     margin-left: 12%;
     margin-bottom: 9rem;
     color: #898585
 }
-.camera a{
+
+.camera a {
     text-decoration: none;
     margin-left: 12%;
     color: #3975d7;
 
 }
-.swiper-wrapper {
-    width: 100%;
-    height: max-content !important;
-    padding-bottom: 64px !important;
-    -webkit-transition-timing-function: linear !important;
-    transition-timing-function: linear !important;
-    position: relative;
-    }
-    .swiper-pagination-bullet {
-    background: #4f46e5;
-    }
-.image-slide {
-    margin-top: 7rem;
-    /* margin-bottom: 3rem; */
-}
-.camera-sys{
+
+.camera-sys {
     margin-top: 2rem;
     margin-bottom: 3rem;
 }
-.camera-sys span{
+
+.camera-sys span {
     color: #588ee6;
 }
-.camera-sys h1{
+
+.camera-sys h1 {
     font-weight: 630;
     margin-left: 12%;
 }
-#camera-sys-main, #cam-lens-main, #audio-main{
+
+#camera-sys-main,
+#cam-lens-main,
+#audio-main {
     background-color: #E0EFF7;
 }
-.camera-sys p{
+
+.camera-sys p {
     width: 54rem;
     margin-top: 3rem;
     margin-left: 12%;
     justify-items: center;
     margin-bottom: 5rem;
-    font-weight: 500 ;
+    font-weight: 500;
     font-size: 1.4rem;
     color: #7c7878
 }
-.camera-sys b{
+
+.camera-sys b {
     color: #000;
 }
-.wide-cam p{
+
+.wide-cam p {
     width: 46rem;
     margin-top: 3rem;
-    font-weight: 500 ;
+    font-weight: 500;
     font-size: 1.4rem;
     color: #7c7878
 }
-.wide-cam b{
+.wide-cam span{
+    color: #3975d7;
+}
+
+.wide-cam b {
     color: #000;
 }
-.wide-cam{
+
+.wide-cam {
     margin-left: 12%;
 
 }
-.cam img{
+
+.cam img {
     width: 50rem;
     margin-bottom: 5rem;
     filter: grayscale(100%);
-    border-radius:.5rem;
+    border-radius: .5rem;
 }
-.cam img:hover{
+
+.cam img:hover {
     filter: grayscale(0);
     transition: ease-in-out .5s;
 }
 
-.cam-lens{
+.cam-lens {
     margin-left: 12%;
 }
-.cam{
+
+.cam {
     display: flex;
 }
-.cam h1{
+
+.cam h1 {
     margin-left: 2rem;
     margin-top: 22%;
     font-weight: 600;
     color: #7c7878
 }
-.cam h1:hover{
+
+.cam h1:hover {
     color: #000;
     transition: ease-in-out .5s;
 }
-.audio-mix{
-    margin-left: 12%;
+
+.audio-mix {
+    margin-left: 2rem;
 }
-.audio-mix h1, h2{
-    font-weight: 600;
+
+.audio-mix h1 {
+    font-weight: 700;
 }
-.audio-mix h1{
+
+.audio-mix h1 {
     color: #7c7878
 }
-.audio-mix img{
+
+.audio-mix h2 {
+    margin-top: 0;
+    color: #7c7878
+}
+
+.audio-mix img {
     width: 50rem;
     margin-top: 3rem;
 }
-.audio-mix p{
+
+.audio-mix p {
     width: 46rem;
-    font-weight: 500 ;
+    font-weight: 500;
     font-size: 1.4rem;
+    margin-left: 3rem;
     color: #7c7878
 }
-.audio-mix b{
+
+.audio-mix b {
     color: #000;
 }
-.audio{
+
+.audio {
     background-color: rgb(255, 255, 255);
-    width: 60rem;
-    margin-left: 17rem;
+    width: 55rem;
+    margin-left: 19rem;
     border-radius: 1rem;
     box-shadow: 1rem;
 }
-.audio-spec{
+
+.audio img {}
+
+.audio-spec {
     margin-top: 2rem;
     width: 15rem;
 }
-.audio-spec h1{
+
+.audio-spec h1 {
     font-size: 1.5rem;
     font-weight: 500;
 }
-.audio-spec p{
+
+.audio-spec p {
     color: #7c7878
 }
+
 .audio-wrap {
     position: relative;
-    height: 300px; /* Set a height for the container */
-    display: flex; /* Arrange the children in a row */
-    justify-content: center; /* Center the items horizontally */
-    align-items: center; /* Center the items vertically */
+    height: 300px;
+    /* Set a height for the container */
+    display: flex;
+    /* Arrange the children in a row */
+    justify-content: center;
+    /* Center the items horizontally */
+    align-items: center;
+    /* Center the items vertically */
 }
 
 .audio-spec {
-    position: relative; /* Allow z-index to take effect */
-    width: 250px; /* Set a fixed width for the cards */
-    height: 250px; /* Set a fixed height for the cards */
+    position: relative;
+    /* Allow z-index to take effect */
+    width: 250px;
+    /* Set a fixed width for the cards */
+    height: 250px;
+    /* Set a fixed height for the cards */
     text-align: center;
     padding: 20px;
-    background-color: white; /* Add a background color */
+    background-color: white;
+    /* Add a background color */
     border: 2px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 0 -50px; /* Overlap the cards horizontally */
-    z-index: 1; /* Default stacking order */
-    transition: transform 0.3s, z-index 0.3s; /* Smooth hover effect */
+    margin: 0 -50px;
+    /* Overlap the cards horizontally */
+    z-index: 1;
+    /* Default stacking order */
+    transition: transform 0.3s, z-index 0.3s;
+    /* Smooth hover effect */
 }
 
 /* Style for specific cards */
 .audio-spec:nth-child(1) {
-    background-color: #f8d7da; /* Light red */
-    z-index: 1; /* Lowest layer */
+    background-color: #f8d7da;
+    /* Light red */
+    z-index: 1;
+    /* Lowest layer */
 }
 
 .audio-spec:nth-child(2) {
-    background-color: #d4edda; /* Light green */
-    z-index: 2; /* Middle layer */
-    transform: scale(1.1); /* Slightly enlarge the middle card */
+    background-color: #d4edda;
+    /* Light green */
+    z-index: 2;
+    /* Middle layer */
+    transform: scale(1.1);
+    /* Slightly enlarge the middle card */
 }
 
 .audio-spec:nth-child(3) {
-    background-color: #d1ecf1; /* Light blue */
-    z-index: 1; /* Lowest layer */
+    background-color: #d1ecf1;
+    /* Light blue */
+    z-index: 1;
+    /* Lowest layer */
 }
 
 /* Hover effect to bring the card to the top */
 .audio-spec:hover {
-    z-index: 3; /* Bring the hovered card to the top */
-    transform: scale(1.2); /* Enlarge the hovered card */
+    z-index: 3;
+    /* Bring the hovered card to the top */
+    transform: scale(1.2);
+    /* Enlarge the hovered card */
 }
-#a18-main{
+
+#a18-main {
     background-color: #000;
 }
-.chipset h1, h2, p{
+
+.chipset h1,
+h2,
+p {
     color: #ffffff;
-  }
-.chipset p{
-    font-weight: 500 ;
+}
+
+.chipset p {
+    font-weight: 500;
     font-size: 1.4rem;
     color: #7c7878
 }
-.chipset span{
+
+.chipset span {
     color: #ffffff;
 }
-.chipset h1, h2{
+
+.chipset h1,
+h2 {
     font-weight: 700;
     margin-top: 6rem;
 }
-.chipset p{
+
+.chipset p {
     margin-top: 6rem;
 }
-.chipset h1{
+
+.chipset h1 {
     color: #3975d7;
 }
-.chipset h2{
+
+.chipset h2 {
     font-weight: 700;
 }
-.chip h1{
+
+.chip h1 {
     font-size: 1.8rem;
     color: #3975d7;
     font-weight: 500;
     margin: 0;
 }
-.chip h3{
+
+.chip h3 {
     color: #ffffff;
 }
-.chip-spec{
+
+.chip-spec {
     display: flex;
     flex-direction: row;
+}
+
+#spec-main,
+#battery-main, #durable-main{
+    background-color: #EDF0F1;
+}
+
+.cam-spec h1 {
+    font-weight: 600;
+}
+
+.cam-spec span {
+    color: #3975d7;
+}
+
+.cam-spec {
+    margin-left: 12%;
+}
+
+.cam-spec img {
+    margin-top: 5rem;
+    width: 80rem;
+}
+
+.ParallaxContainer h1 {
+    color: white;
+    font-weight: 600;
+    margin-top: 8rem;
+}
+
+.ParallaxContainer span {
+    color: #000;
+}
+
+.battery {
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.ContentContainer {
+    position: relative;
+    display: block;
+    background-color: white;
+    z-index: 1;
+}
+
+.battery-Content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+p {
+    margin: 75px 0;
+}
+
+.ParallaxContainer {
+    display: flex;
+    flex: 1 0 auto;
+    position: relative;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: translateZ(-1px) scale(2);
+    background-color: #3975d7;
+    width: auto;
+}
+
+.battery {
+    margin-top: 0;
+    width: 100%;
+    scrollbar-width: none;
+}
+
+.battery-Content p {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #7c7878
+}
+
+.ContentContainer {
+    background-color: #EDF0F1;
+}
+
+.battery-Content .p1 {
+    margin-top: 3rem;
+}
+
+.battery-Content span {
+    color: #3975d7;
+}
+
+.pic-ctn {
+    position: relative;
+    width: 40%;
+    height: 90vh;
+    /* Full screen height */
+    overflow: hidden;
+    /* Hide overflowing content */
+    margin-left: 12%;
+}
+
+.pic-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    opacity: 0;
+    animation: display 8s infinite ease-in-out;
+}
+
+.pic-wrapper img {
+    width: 100%;
+    height: 90%;
+    /* Image takes 90% of container height */
+    object-fit: cover;
+    /* Ensures the image covers the container without distortion */
+}
+
+.pic-wrapper .text {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes display {
+    0% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    10% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    25% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    35% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+}
+
+.pic-wrapper:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.pic-wrapper:nth-child(3) {
+    animation-delay: 4s;
+}
+
+.pic-wrapper:nth-child(4) {
+    animation-delay: 6s;
+}
+
+.parallax {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#window-1 {
+    background-color: #EDF0F1;
+    width: 100%;
+    height: 90vh;
+    text-decoration: none;
+}
+
+#window-2 {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 90vh;
+    text-decoration: none;
+}
+
+#window-3 {
+    background-color: #E0EFF7;
+    width: 100%;
+    height: 90vh;
+    text-decoration: none;
+}
+
+.card {
+    padding: 20px;
+    display: block;
+    position: relative;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+    transform: translateZ(-1px) scale(2);
+}
+.card h2{
+    color: black;
+}
+.card img {
+    width: 12rem;
+    margin-left: 3.5rem;
+}
+
+.card:hover {
+    transform: scale(1.7);
+    border-radius: 1rem;
+}
+
+.card h2 a {
+    color: black;
+}
+.durable-head h1{
+    margin-left: 12%;
+    font-weight: 600;
+}
+.durable-head span{
+    color: #7c7878
+}
+
+.durable-head .dur-sp{
+    color: #3975d7;
 }

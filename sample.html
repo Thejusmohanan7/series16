@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Image Carousel with Text</title>
+    <style>
+        .parallax{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        #window-1 {
+            background-color: #EDF0F1;
+            width: 100%;
+            height: 100vh;
+            text-decoration: none;
+            width: 60rem;
+            margin-left: 20%;
+            border-radius: 1rem;
+        }
+
+        #window-2 {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            height: 100vh;
+            text-decoration: none;
+            width: 60rem;
+            margin-left: 20%;
+            border-radius: 1rem;
+
+        }
+
+        #window-3 {
+            background-color: #E0EFF7;
+            width: 100%;
+            height: 100vh;
+            text-decoration: none;
+            width: 60rem;
+            margin-left: 20%;
+            border-radius: 1rem;
+
+        }
+
+        .card {
+            padding: 20px;
+            display: block;
+            position: relative;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+            transition: 0.3s ease-in;
+            cursor: pointer;
+            transform: translateZ(-1px) scale(2);
+        }
+        .card img{
+            width: 15rem;
+        }
+
+        .card:hover {
+            transform: scale(1.7);
+            border-radius: 1rem;
+        }
+
+        .card h2 a {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="window-1" class="parallax">
+        <div class="card">
+            <img src="./img/design-1.png" alt="">
+            <h2><a href="#window-2">
+                The Ceramic Shield front on a iPhone 16 in ultramarine</a></h2>
+        </div>
+    </section>
+    <section id="window-2" class="parallax">
+        <div class="card">
+            <img src="./img/design-2.png" alt="">
+            <h2><a href="#window-3">
+
+                Engineered from beautiful aerospace-grade aluminium</a></h2>
+        </div>
+    </section>
+    <section id="window-3" class="parallax">
+        <div class="card">
+            <img src="./img/design-3.png" alt="">
+            <h2><a href="#window-1">Splash, water and dust resistant.</a></h2>
+        </div>
+    </section>
+</body>
+
+</html>
